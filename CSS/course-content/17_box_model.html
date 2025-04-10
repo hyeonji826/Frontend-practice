@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f0f0f0;
+        padding: 40px;
+      }
+      .container {
+        width: 600px;
+        margin: 0 auto;
+      }
+      .box {
+        background-color: white;
+        padding: 20px;
+        margin: 30px 0;
+      }
+
+      .box1 {
+        border: 2px dotted #4caf50;
+      }
+      .box2 {
+        border: 2px dashed #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">첫 번째 박스</div>
+      <div class="box box2">두 번째 박스</div>
+    </div>
+  </body>
+</html>

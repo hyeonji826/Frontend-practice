@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 스타일 적용 방식</title>
+    <!-- 스타일이 중복될 경우 나중에 적용된 것이 최종적으로 적용된다. -->
+    <!-- 외부 스타일 적용 -->
+    <!-- <link rel="stylesheet" href="./파일명"> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      /* . = class , .class지정이름 */
+      .internal {
+        color: deepskyblue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 스타일 적용 방식</h1>
+
+    <!-- 내부 스타일 적용 -->
+    <!-- class : CSS를 다른 태그에도 적용시키기 위한 함수 -->
+    <p class="internal">이 문장은 내부 스타일시트로 스타일이 적용되었습니다.</p>
+    <!-- p.internal = <p class="internal"></p> -->
+
+    <!-- 인라인 스타일 적용-->
+    <p style="color: deeppink; font-style: italic">
+      이 문장은 인라인 스타일로 스타일이 적용되었습니다.
+    </p>
+  </body>
+</html>

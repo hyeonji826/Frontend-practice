@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex layout</title>
+    <style>
+      .container {
+        /* flex의 기본값은 가로정렬 */
+        display: flex;
+        gap: 10px;
+      }
+      .item {
+        background-color: gold;
+        padding: 20px;
+        text-align: center;
+        /* flex : 1 -> 같은 비율로 채워진다. */
+        flex: 1;
+        /* border-radius -> 테두리를 둥글게 ~ 픽셀값과 둥근정도는 비례함 */
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">왼쪽</div>
+      <div class="item">가운데</div>
+      <div class="item">오른쪽</div>
+    </div>
+  </body>
+</html>

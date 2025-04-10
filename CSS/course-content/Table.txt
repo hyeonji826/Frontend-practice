@@ -1,0 +1,16 @@
+1. 테이블
+<table> 태그로 만들고 그 안에
+<tr> : table row
+<td> : table data
+<th> : table header , 머리글
+위의 태그를 사용해 셀 데이터를 입력한다.
+
+2. <thead> , <tbody>
+~ <thead>,<tbody>는 HTML 테이블에서 표의 구조를 논리적으로 구분하기 위해 사용하는 태그이다.
+
+2.1 <thead> : 테이블의 헤더 영역, 즉 제목 행들을 감싸는 용도 + <th>
+2.2 <tbody> : 실제 데이터가 들어가는 본문 영역을 감싸며, + <td>이 포함된 여러 <tr>을 사용
+
+3. <colspan> ,<rowspan>
+<colspan> : 열끼리 합치는 것
+<rowspan> : 행끼리 합치는 것

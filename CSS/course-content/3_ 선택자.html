@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      /* 태그 선택자 */
+      h1 {
+        color: deepskyblue;
+        text-align: center;
+      }
+      /* 클래스 선택자 */
+      .intro {
+        font-weight: bold;
+        color: deeppink;
+      }
+      /* 아이디 선택자 */
+      #student-list {
+        background-color: #f9f9f9;
+        padding: 30px;
+      }
+      /* 그룹 선택자 */
+      p,
+      li {
+        font-size: 12px;
+      }
+      /* 클래스 선택자 */
+      .highlight {
+        color: gold;
+      }
+      /* 의사 클래스 선택자 ~ 하이퍼링크 꾸미기*/
+      /* 한번도 다녀온 적 없은 링크 */
+      a:link {
+        text-decoration: none;
+        color: deeppink;
+      }
+      /* 다녀온 적 있는 링크 */
+      a:visited {
+        text-decoration: none;
+        color: deepskyblue;
+      }
+      /* 마우스 올려놨을 때 */
+      a:hover {
+        color: yellowgreen;
+        text-decoration: underline;
+      }
+      /* 가만히 누르고 있을 때 */
+      a:active {
+        color: blue;
+        text-decoration: underline;
+      }
+      /* 속성 선택자 */
+      a[href="#"] {
+        font-weight: bold;
+        color: red;
+      }
+      /* href^="단어" : 단어가 들어가있는 속성을 고름  */
+      a[href^="https"] {
+        font-weight: bold;
+        color: pink;
+      }
+      /* 자식 선택자 */
+      ul#student-list > li {
+        list-style-type: square;
+      }
+
+      /* 자손 선택자 */
+      ul#student-list p {
+        color: gray;
+        font-style: italic;
+      }
+
+      /* 형제 선택자 */
+      /* + : 바로 옆에 있는 */
+      p.intro + p {
+        background-color: aqua;
+      }
+      /* ~ : 그냥 형제 선택(복수 선택도 가능) */
+      p.intro ~ p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>선택자</h1>
+    <p class="intro">이 문단은 첫번쨰 문단입니다.</p>
+    <p>이 문단은 두번째 문단입니다.</p>
+    <!-- span 태그는 인라인 태그임. -->
+    <span class="intro">이 문장은 첫번째 문장입니다.</span>
+
+    <ul id="student-list">
+      <li>김사과</li>
+      <li>반하나</li>
+      <li>오렌지</li>
+      <p class="highlight">출석부</p>
+    </ul>
+
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+   
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ullam
+      recusandae nulla, laboriosam voluptates impedit doloribus, asperiores
+      blanditiis expedita architecto hic sapiente. Cupiditate sed, et ut
+      voluptas ratione porro inventore.
+    </p>
+
+   
+    <a href="https://www.naver.com">외부 링크</a>
+    <!-- 내부 링크 : 페이지의 상단으로 바로이동 -->
+    <a href="#">내부 링크</a>
+
+    <!-- #id 명 : 페이지가 해당 id를 기준에 맞춰 바로이동 -->
+    <a href="#student-list">내부 링크2</a>
+  </body>
+</html>
+
+<!-- class와 id 의 차이 
+    class : 클래스가 걸려있는 모든 태그에 적용하고 싶을 때 ~ CSS를 위해서 나온 속성
+    id : 아이디 옆에 나오는 이름은 유일한게 스타일링 할 때 사용 ~ 따라서 중복되면 안된다. ~ CSS에서 자주 사용은 안함(icon 꾸밀 때 정도?)/ Java스크립트에서 자주 사용 -->

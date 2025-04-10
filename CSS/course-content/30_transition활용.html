@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 활용</title>
+    <style>
+      #ex {
+        position: relative;
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+        border: 5px solid black;
+        padding: 30px;
+      }
+      p {
+        text-align: center;
+        padding-top: 50px;
+        font-weight: bold;
+      }
+
+      .box {
+        font-size: 20px;
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 50px;
+        background-color: gold;
+      }
+
+      #ex:hover > .box {
+        transform: rotate(720deg);
+        margin-left: 650px;
+      }
+
+      #no-delay {
+        transition-duration: 3s;
+      }
+      #delay {
+        transition-duration: 2s;
+        transition-delay: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ex">
+      <div id="no-delay" class="box">
+        <p>(●'◡'●)</p>
+      </div>
+      <div id="delay" class="box">
+        <p>༼ つ ◕_◕ ༽つ</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #a0e9ff, #fff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .ball {
+        width: 80px;
+        height: 80px;
+        background-color: #ff6b6b;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: bounce 1s in infinite ease-in-out;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-200px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>

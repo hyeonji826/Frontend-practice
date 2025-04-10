@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셀합치기</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    table {
+      width: 500px;
+    }
+    td {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td colspan="3">1</td>
+      </tr>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셀합치기</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th rowspan="2">이름</th>
+        <th colspan="2">성적</th>
+      </tr>
+      <tr>
+        <th>수학</th>
+        <th>영어</th>
+      </tr>
+      <tr>
+        <td>김사과</td>
+        <td>90</td>
+        <td>85</td>
+      </tr>
+    </table>
+  </body>
+</html>

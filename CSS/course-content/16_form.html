@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form tag</title>
+    <style>
+      @font-face {
+        font-family: "YESMyoungjo-Regular";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: YESMyoungjo-Regular;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f2f2f2;
+        padding: 40px;
+      }
+
+      main {
+        /* 사이트를 가운데 정렬 방법 */
+        max-width: 600px;
+        /* margin : 0 auto : 위아래=0  좌우=같은값으로 자동 설정  */
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        /* box-shadow: 오른쪽 아래 번짐정도 rgba(0, 0, 0, alpha)-> 번지는 색상; */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+
+      .form-group.inline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      input[type="color"] {
+        width: 50px;
+        height: 40px;
+        padding: 0;
+        border: none;
+      }
+      fieldset {
+        border: 1px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      legend {
+        font-weight: bold;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3 ease;
+      }
+      button[type="submit"].hover {
+        background-color: #45a049;
+      }
+      .footer-text {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>회원 가입</h1>
+      <!-- form action="회원정보를 전송할 데이터 주소(절대 or 상대경로 or 프로토콜)" -->
+      <!-- 1. method="post" : URL에 노출X -->
+      <!-- 2. method="get" : URL에 우리가 찾을 정보를 그대로 넘기는 방법(노출X)-->
+      <form action="/signup" method="post">
+        <div class="form-group">
+          <!-- <input type="text"> : 입력할 칸이 생김(자릿수는 무한대) -->
+          <!-- maxlength="자릿수 한정" -->
+          <!-- placeholder="아무것도 적지않았을 때 나오는 " -->
+          <label for="userid">아이디</label>
+          <input
+            type="text"
+            maxlength="20"
+            name="userid"
+            id="userid"
+            placeholder="아이디를 입력하세요."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="userpw">비밀번호</label>
+          <input
+            type="password"
+            maxlength="20"
+            name="userpw"
+            id="userpw"
+            placeholder="비밀번호를 입력하세요."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            maxlength="100"
+            name="email"
+            id="email"
+            placeholder="이메일를 입력하세요."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hp">연락처</label>
+          <input
+            type="tel"
+            maxlength="11"
+            placeholder="01000000000"
+            id="hp"
+            name="hp"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="birth">생년월일</label>
+          <input type="date" name="birth" id="birth" />
+        </div>
+        <!-- value 값을 넣어주지 않으면 창칸에 입력한 값들이 넘어감 -->
+        <div class="form-group">
+          <!-- name="그룹명" : 매우 중요! ~ 속성을 지정하여 데이터를 넘겨주는 역할 -->
+          <!-- label : 글자를 선택해도 선택된다. -->
+          성별
+          <label
+            >남자<input type="radio" name="gender" value="남" id="male" checked
+          /></label>
+          <label>
+            여자<input type="radio" name="gender" value="여" id="female"
+          /></label>
+        </div>
+
+        <div class="form-group inline">
+          <label for="color">좋아하는 색상</label>
+          <input type="color" name="color" id="color" />
+        </div>
+
+        <div class="form-group">
+          <label for="region">거주지역</label>
+          <!-- <select name="" id=""></select> : 드롭다운 -->
+          <select name="region" id="region">
+            <option value="">--선택하세요--</option>
+            <option value="서울">서울</option>
+            <option value="부산">부산</option>
+            <option value="대전">대전</option>
+            <option value="인천">인천</option>
+          </select>
+        </div>
+
+        <!-- 체크박스 묶어주기 -> field set으로 묶어주기-->
+        <fieldset>
+          <!-- <legend>필드셋 제목</legend> -->
+          <legend>관심분야</legend>
+          <label for="html">html</label>
+          <input type="checkbox" name="interest" id="html" value="html" />
+          <label for="CSS">CSS</label>
+          <input type="checkbox" name="interest" id="CSS" value="CSS" />
+          <label for="javascript">javascript</label>
+          <input
+            type="checkbox"
+            name="interest"
+            id="javascript"
+            value="javascript"
+          />
+          <label for="java">java</label>
+          <input type="checkbox" name="interest" id="java" value="java" />
+          <label for="python">python</label>
+          <input type="checkbox" name="interest" id="python" value="python" />
+        </fieldset>
+
+        <div class="form-group">
+          <label for="intro">자기소개</label>
+          <textarea
+            name="intro"
+            id="intro"
+            placeholder="간단한 자기소개를 작성해주세요."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="file">프로필 사진 업로드</label>
+          <input type="file" name="file" id="file" />
+        </div>
+
+        <!-- submit(버튼)을 누르면 action으로 이동하게 된다. -->
+        <button type="submit">가입하기</button>
+
+        <p class="footer-text">
+          이미 계정이 있으신가요? <a href="#">로그인</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>

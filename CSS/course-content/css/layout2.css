@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "YESMyoungjo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* * : 전체 선택자 */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing 의 기본값은 content-box이다. */
+  box-sizing: border-box;
+}
+body {
+  font-family: YESMyoungjo-Regular;
+  /* line-height : 글자와 글자의 여백(상하) */
+  line-height: 1.6;
+}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  padding: 20px;
+}
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background-color: #555;
+  color: white;
+}
+
+nav ul {
+  /* 가로정렬 */
+  display: flex;
+  /* 앞에 리스트 표시인 동그라미?가 사라짐 */
+  list-style: none;
+  /* 블록을 가운데로 정렬 */
+  justify-content: center;
+  gap: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+section {
+  background-color: ivory;
+  padding: 20px;
+  border-radius: 6px;
+}
+article {
+  margin-bottom: 20px;
+}
+
+article h2 {
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: #fefbd8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}

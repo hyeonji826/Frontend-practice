@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relative</title>
+    <style>
+      .container {
+        background-color: #eee;
+        padding: 40px;
+        /* relative는 부모요소에 적용 */
+        position: relative;
+        height: 300px;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        line-height: 150px;
+        text-align: center;
+        margin-bottom: 20px;
+        /* relative는 부모요소에 적용 */
+        position: relative;
+      }
+      .relative-box {
+        background-color: #ff9800;
+        /* 자식요소의 relative */
+        top: -100px;
+        left: 80px;
+      }
+      .default-box {
+        /* z-index : 겹쳤을 때 값을 주면 
+        (큰 값이)맨 위로 올라감. */
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box default-box">기본 박스</div>
+      <div class="box relative-box">relative 박스</div>
+    </div>
+  </body>
+</html>

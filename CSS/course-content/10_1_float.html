@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+    <style>
+      #box1 {
+        background-color: gold;
+        float: left;
+        margin-right: 20px;
+      }
+      #box2 {
+        background-color: deeppink;
+        float: left;
+        margin-right: 20px;
+      }
+      #box3 {
+        background-color: greenyellow;
+        float: left;
+        margin-right: 20px;
+      }
+      #box4 {
+        background-color: deepskyblue;
+        float: right;
+      }
+      hr {
+        clear: both;
+      }
+
+      p {
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+      }
+      #p1 {
+        width: 38%;
+        background-color: gold;
+        float: left;
+        margin-bottom: 20px;
+      }
+      #p2 {
+        width: 53%;
+        background-color: deepskyblue;
+        float: right;
+      }
+      #p3 {
+        /* clear : both -> 왼쪽&오른쪽 float를 막음 */
+        clear: both;
+        background-color: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- #box + Enter -> dic 자동생성 -->
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+
+    <hr />
+
+    <div id="p1">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+        quasi enim soluta sit assumenda dicta, accusantium inventore non amet
+        nobis ab ducimus quisquam quo, pariatur recusandae ullam expedita, modi
+        voluptatem!
+      </p>
+    </div>
+    <div id="p2">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+        quasi enim soluta sit assumenda dicta, accusantium inventore non amet
+        nobis ab ducimus quisquam quo, pariatur recusandae ullam expedita, modi
+        voluptatem!
+      </p>
+    </div>
+    <div id="p3">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+        quasi enim soluta sit assumenda dicta, accusantium inventore non amet
+        nobis ab ducimus quisquam quo, pariatur recusandae ullam expedita, modi
+        voluptatem!
+      </p>
+    </div>
+  </body>
+</html>

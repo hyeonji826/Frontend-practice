@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky</title>
+    <style>
+      body {
+        margin: 0;
+        line-height: 1.6;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background-color: #4caf50;
+        padding: 15px 20px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        gap: 20px;
+        z-index: 1000;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+      }
+      header a:hover {
+        text-decoration: underline;
+        color: yellow;
+      }
+      .content {
+        padding: 20px;
+      }
+      .section {
+        height: 1000px;
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#">홈</a>
+      <a href="#">소개</a>
+      <a href="#">서비스</a>
+      <a href="">문의</a>
+    </header>
+    <div class="content">
+      <div class="section">
+        <h2>섹션 1</h2>
+        <p>스크롤을 내려보세요. 메뉴가 상단에 고정된 채 따라옵니다.</p>
+      </div>
+      <div class="section">
+        <h2>섹션 2</h2>
+        <p>메뉴는 화면 위쪽에 계속 유지되며, 컨텐츠를 볼 수 있게 해줍니다.</p>
+      </div>
+      <div class="section">
+        <h2>섹션 3</h2>
+        <p>이런 방식은 실제 웹사이트에서도 네비게이션바로 많이 사용됩니다.</p>
+      </div>
+    </div>
+  </body>
+</html>

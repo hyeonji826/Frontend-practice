@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid layout practice</title>
+    <style>
+      .layout {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        grid-template-columns: 200px 1fr;
+        /* 200px 고정 1fr : 나머지 */
+        grid-template-rows: 60px 1fr 40 px;
+        /* 위에서 60px 아래서 40px 나머지 1fr */
+        height: 100vh;
+        gap: 10px;
+      }
+      .box {
+        padding: 20px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        /* align-items : 위아래 가운데 정렬 -> 블록을 옮겨줌*/
+        align-items: center;
+        /* justify-content : 좌우 가운데 정렬 -> 블록을 옮겨줌 */
+        justify-content: center;
+        /* text-align: center -> 인라인 속성을 옮겨줌; */
+      }
+      .header {
+        background-color: #4a90e2;
+        grid-area: header;
+      }
+      .sidebar {
+        background-color: #50e4c2;
+        grid-area: sidebar;
+      }
+      .content {
+        background-color: #f5a623;
+        grid-area: content;
+      }
+      .footer {
+        background-color: #9013fe;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- box header 는 두개의 class가 정의된 것 -->
+      <div class="box header">header</div>
+      <div class="box sidebar">sidebar</div>
+      <div class="box content">Main Content</div>
+      <div class="box footer">footer</div>
+    </div>
+  </body>
+</html>

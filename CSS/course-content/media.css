@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "YESMyoungjo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#container {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+#menus {
+  width: 100%;
+}
+
+/* 메뉴에 있는 div에 속성부여 */
+#menus > div {
+  height: 300px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  /* 부모에 포지션 잡아주기 */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#menus h2 {
+  /* 메유의 자손태그 */
+  position: absolute;
+  right: 3%;
+  bottom: 10px;
+  color: white;
+  text-shadow: 3px 3px 5px white;
+}
+
+#menu1,
+#menu2,
+#menu3,
+#menu4,
+#menu5 {
+  width: 100%;
+}
+
+#menu1 {
+  background: url(./travel1.jpg) no-repeat center/cover;
+}
+
+#menu2 {
+  background: url(./travel2.jpg) no-repeat center/cover;
+}
+
+#menu3 {
+  background: url(./travel3.jpg) no-repeat center/cover;
+}
+
+#menu4 {
+  background: url(./travel4.jpg) no-repeat center/cover;
+}
+
+#menu5 {
+  background: url(./travel5.jpg) no-repeat center/cover;
+}
+footer {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+}
+
+footer > p {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 테블릿 */
+@media (min-width:768px) and (max-width:1023px) {
+    #menus {
+        /* flex : 가로 정렬 */
+        display: flex;
+        /* space-between : 끄트머리를 붙이는(양쪽정렬) */
+        justify-content: space-between;
+
+        /* flex-wrap : 줄바꿈 속성 ; */
+        flex-wrap: wrap ;
+    }
+}
+
+#menu1,
+#menu2,
+#menu3,
+#menu4 {
+    width: 49%;
+}
+
+/* PC */
+@media (min-width:1024px) {
+   #menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   }
+}
+
+#menu1,
+#menu2,
+#menu3 {
+    width: 33%;
+}
+
+#menu4 {
+    width: 33%;
+}
+
+#menu5 {
+    width:66%;
+}
+
+
+
