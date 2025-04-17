@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "NanumHumanTTFBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2501-1@1.1/NanumHumanTTFBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NanumHumanTTFBold";
+}
+
+body {
+  background-color: rgb(201, 214, 225);
+  padding: 100px;
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+p {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(106, 155, 215);
+  box-shadow: 1px 1px rgb(79, 77, 77);
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  background-color: rgb(43, 80, 124);
+}
